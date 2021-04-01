@@ -44,6 +44,10 @@ button {
 
 button {
   cursor: pointer;
+  outline: none;
+  &:active {
+    outline: none;
+  }
 }
 
 a {

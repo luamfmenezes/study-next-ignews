@@ -13,6 +13,7 @@
   nav {
     height: 5rem;
     margin-left: 5rem;
+    position: relative;
 
     a {
       display: inline-block;
@@ -34,16 +35,15 @@
         color: var(--white);
         font-weight: bold;
       }
-      &.active::after {
-        content: "";
-        position: absolute;
-        bottom: 1px;
-        left: 0;
-        height: 3px;
-        border-radius: 3px 3px 0 0;
-        width: 100%;
-        background: var(--yellow-500);
-      }
+    }
+    div {
+      position: absolute;
+      bottom: 1px;
+      height: 3px;
+      border-radius: 3px 3px 0 0;
+      width: 100%;
+      background: var(--yellow-500);
+      transition: 0.2s;
     }
   }
 

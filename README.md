@@ -27,3 +27,7 @@ Create the HTML every time
 2. stripe login
 3. stripe listen --forward-to localhost:3000/api/route-name
 4. save STRIPE_WEBHOOK_SECRET
+
+## Powerful tips
+
+cloneElement -> add props to children

@@ -3,10 +3,12 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
 import { prismicGraphql } from "../../services/prismic-graphql";
+import Link from "next/link";
 import { RichText } from "prismic-dom";
 import { formatRelative } from "date-fns";
 
 import styles from "./styles.module.scss";
+import { PostCard } from "./_postCard";
 
 interface Post {
   title: string;
@@ -29,11 +31,7 @@ const Posts: React.FC<PostsPros> = ({ posts }) => {
       <main className={styles.container}>
         <div className={styles.posts}>
           {posts.map((post) => (
-            <a key={post.slug}>
-              <time>{post.dateRelative}</time>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-            </a>
+            <PostCard post={post} key={post.slug} />
           ))}
         </div>
       </main>
